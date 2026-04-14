@@ -166,7 +166,16 @@ The code is organized into the following logical sections:
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/ivanishantilal/splitsecond-mvp.git
+```
+``` bash
 cd splitsecond-mvp
+```
+``` bash
 pip install streamlit
+```
+``` bash
 py -m streamlit run app.py
+```
+``` bash
 http://localhost:8501
+``` 
