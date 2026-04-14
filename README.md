@@ -167,15 +167,20 @@ The code is organized into the following logical sections:
 ```bash
 git clone https://github.com/ivanishantilal/splitsecond-mvp.git
 ```
+### 2. Install dependencies
 ``` bash
 cd splitsecond-mvp
 ```
+### 3. Run the app
 ``` bash
 pip install streamlit
 ```
+### 4. Open the app
+Streamlit will provide a local URL, usually:
 ``` bash
 py -m streamlit run app.py
 ```
 ``` bash
 http://localhost:8501
 ``` 
+Open this in your browser.
