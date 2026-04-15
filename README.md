@@ -1,15 +1,19 @@
 # SplitSecond MVP
 
 ## Overview
-SplitSecond is a FinTech MVP for instant group bill splitting and settlement.
+SplitSecond is a FinTech MVP for end-to-end group payment coordination, from expense capture to final settlement.
 
-The app is designed around a common payment friction: one person pays for a group expense, but splitting the bill afterward is slow, manual, and inconvenient. SplitSecond simplifies this process by simulating a product where users can create a shared split session, scan a receipt, detect nearby participants, assign items to the right people, and confirm payment securely.
+The app is designed around a common payment friction: coordinating group payments is fragmented, manual, and inefficient. Existing solutions often focus only on calculating who owes what, but do not structure the full payment process from start to finish.
+
+SplitSecond addresses this by providing a structured, end-to-end flow that guides users from group creation and receipt capture to allocation, settlement, and payment confirmation.
 
 This MVP was built as part of a FinTech assignment and focuses on demonstrating the core product flow and business logic rather than real banking integrations.
 
 ---
 
-## Core Idea
+## Core Idea: End-to-End Group Payment System
+Instead of acting as a simple bill-splitting tool, SplitSecond structures the entire group payment experience as a coordinated, step-by-step system.
+
 SplitSecond enables users to:
 
 - create a shared bill-splitting session  
@@ -18,7 +22,22 @@ SplitSecond enables users to:
 - choose between equal split and item-based split  
 - assign items, tax, and tip to participants  
 - automatically calculate how much each person owes  
-- confirm settlement with simulated biometric authentication  
+- execute and confirm settlement through a structured payment flow with simulated biometric authentication  
+
+---
+
+## Differentiation from Existing Solutions
+
+Existing apps such as Tab enable receipt-based bill splitting and item assignment. However, they typically stop at calculating what each person owes and rely on external platforms (e.g., Venmo) for actual payment.
+
+SplitSecond extends this by structuring the entire group payment process:
+
+- pre-payment coordination (group creation and participant discovery)  
+- guided allocation of expenses  
+- built-in settlement logic  
+- integrated payment confirmation flow  
+
+This positions SplitSecond not just as a bill-splitting tool, but as a complete group payment coordination system.
 
 ---
 
@@ -79,7 +98,7 @@ Users can:
 ---
 
 ## Example Use Case
-A group of friends finishes dinner at a restaurant. One user starts a split session, nearby friends join the group, the receipt is scanned, each person selects what they consumed, and the app calculates exact owed amounts. The payer is identified, settlement instructions are generated, and payment is confirmed with biometric authentication.
+A group of friends finishes dinner at a restaurant. One user starts a split session, nearby friends join the group, the receipt is scanned, each person selects what they consumed, and the app calculates exact owed amounts. The payer is identified, settlement instructions are generated, and the payment is completed through a structured, app-guided settlement flow with biometric authentication.
 
 ---
 
