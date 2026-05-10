@@ -1,11 +1,11 @@
-# SplitSecond ⚡
+# SplitSecond 
 
 **Split bills in seconds, not minutes.**
 A FinTech concept for EU-native, real-time group bill splitting — built around PSD2 open banking, SEPA Instant transfers, and biometric authentication (SCA).
 
 ---
 
-## 🎯 The Problem
+## The Problem
 
 Splitting bills in a group today is slow, awkward, and disconnected from how people actually pay. Existing apps either:
 - only track *who-owes-whom* (Splitwise) and leave the actual money movement to you, or
@@ -15,7 +15,7 @@ SplitSecond closes the loop: **scan the receipt, assign items, and settle instan
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - 📷 **Receipt scanning (OCR)** — snap a photo of the bill, items appear automatically
 - 📡 **NFC group discovery** — nearby phones join the session with a tap, no group chats or QR codes
@@ -39,7 +39,7 @@ splitsecond-mvp/
 
 ---
 
-## 🚀 Running the Prototypes
+## Running the Prototypes
 
 ### Hi-Fi Interactive Prototype (recommended)
 Just open the HTML file in any modern browser:
@@ -56,7 +56,7 @@ streamlit run app.py
 
 ---
 
-## 🧪 The User Flow
+## The User Flow
 
 1. **Welcome** — sign in (PSD2 framing)
 2. **Start a split** — name the occasion + group
@@ -69,7 +69,7 @@ streamlit run app.py
 
 ---
 
-## 🛠️ Tech Concept
+## Tech Concept
 
 | Layer | Technology |
 |---|---|
@@ -79,11 +79,3 @@ streamlit run app.py
 | Banking | Open Banking APIs (PSD2 AISP/PISP) |
 | Receipt OCR | Cloud vision API (concept) |
 | Group sync | NFC discovery + real-time backend |
-
----
-
-## 📚 Context
-
-Built as part of the FinTech course, MSc Business Analytics & Management.
-
-**Author:** Ivani Shantilal
