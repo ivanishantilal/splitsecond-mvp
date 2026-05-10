@@ -1,203 +1,89 @@
-# SplitSecond MVP
+# SplitSecond ⚡
 
-## Overview
-SplitSecond is a FinTech MVP for end-to-end group payment coordination, from expense capture to final settlement.
-
-The app is designed around a common payment friction: coordinating group payments is fragmented, manual, and inefficient. Existing solutions often focus only on calculating who owes what, but do not structure the full payment process from start to finish.
-
-SplitSecond addresses this by providing a structured, end-to-end flow that guides users from group creation and receipt capture to allocation, settlement, and payment confirmation.
-
-This MVP was built as part of a FinTech assignment and focuses on demonstrating the core product flow and business logic rather than real banking integrations.
+**Split bills in seconds, not minutes.**
+A FinTech concept for EU-native, real-time group bill splitting — built around PSD2 open banking, SEPA Instant transfers, and biometric authentication (SCA).
 
 ---
 
-## Core Idea: End-to-End Group Payment System
-Instead of acting as a simple bill-splitting tool, SplitSecond structures the entire group payment experience as a coordinated, step-by-step system.
+## 🎯 The Problem
 
-SplitSecond enables users to:
+Splitting bills in a group today is slow, awkward, and disconnected from how people actually pay. Existing apps either:
+- only track *who-owes-whom* (Splitwise) and leave the actual money movement to you, or
+- require everyone to be on the same closed-loop wallet (Venmo, Tikkie).
 
-- create a shared bill-splitting session  
-- simulate nearby participant discovery  
-- simulate receipt scanning and item extraction  
-- choose between equal split and item-based split  
-- assign items, tax, and tip to participants  
-- automatically calculate how much each person owes  
-- execute and confirm settlement through a structured payment flow with simulated biometric authentication  
+SplitSecond closes the loop: **scan the receipt, assign items, and settle instantly between bank accounts — all in one flow.**
 
 ---
 
-## Differentiation from Existing Solutions
+## ✨ Key Features
 
-Existing apps such as Tab enable receipt-based bill splitting and item assignment. However, they typically stop at calculating what each person owes and rely on external platforms (e.g., Venmo) for actual payment.
-
-SplitSecond extends this by structuring the entire group payment process:
-
-- pre-payment coordination (group creation and participant discovery)  
-- guided allocation of expenses  
-- built-in settlement logic  
-- integrated payment confirmation flow  
-
-This positions SplitSecond not just as a bill-splitting tool, but as a complete group payment coordination system.
+- 📷 **Receipt scanning (OCR)** — snap a photo of the bill, items appear automatically
+- 📡 **NFC group discovery** — nearby phones join the session with a tap, no group chats or QR codes
+- 🍕 **Item-level assignment** — split equally or claim individual dishes
+- 🏦 **SEPA Instant settlement** — bank-to-bank, EU-wide, in seconds
+- 🔐 **Biometric SCA** — PSD2-compliant Face ID / fingerprint authentication
+- 🇪🇺 **EU-native** — built on open banking rails, no closed wallet required
 
 ---
 
-## Main Features
+## 📂 Repository Structure
 
-### 1. Welcome and account setup
-Users can:
-- log in  
-- create an account  
-- simulate a linked payment method  
-- simulate enabled biometric authentication  
-
-### 2. Start a split
-Users can:
-- define the occasion  
-- name the group  
-- simulate creating a shared group session  
-- simulate nearby participants joining the session  
-
-### 3. Smart receipt scanning
-Users can:
-- simulate OCR-based receipt scanning  
-- auto-fill sample receipt items  
-- manually edit items and prices  
-- add tax and tip  
-
-### 4. Proximity-based participant creation
-Users can:
-- simulate scanning nearby users  
-- auto-fill sample participants  
-- manually add or edit participants  
-
-### 5. Flexible split logic
-Users can choose:
-- **Split equally**  
-- **Split by items**  
-
-For item-based splitting, users can assign:
-- personal items to one person  
-- shared items to multiple people  
-- tax and tip as shared cost lines  
-
-### 6. Automatic calculation
-The app automatically computes:
-- subtotal  
-- tax and tip  
-- total bill  
-- per-person amounts  
-- settlement suggestions  
-
-### 7. Settlement and authentication
-Users can:
-- indicate who paid upfront  
-- see who owes whom  
-- simulate Face ID or fingerprint verification  
-- confirm the final payment flow  
+```
+splitsecond-mvp/
+├── app.py                                    # Streamlit MVP — the working logic prototype
+├── Prototype/                                # Hi-fidelity interactive prototype (HTML)
+│   └── SplitSecond Mobile (standalone).html
+├── SplitSecond_Assignment1_SlideDeck.pptx    # Pitch deck
+└── README.md
+```
 
 ---
 
-## Example Use Case
-A group of friends finishes dinner at a restaurant. One user starts a split session, nearby friends join the group, the receipt is scanned, each person selects what they consumed, and the app calculates exact owed amounts. The payer is identified, settlement instructions are generated, and the payment is completed through a structured, app-guided settlement flow with biometric authentication.
+## 🚀 Running the Prototypes
 
----
+### Hi-Fi Interactive Prototype (recommended)
+Just open the HTML file in any modern browser:
+```
+Prototype/SplitSecond Mobile (standalone).html
+```
+Works offline. No install required.
 
-## MVP Scope
-This project is an MVP and therefore simulates several real-world technologies instead of implementing them fully.
-
-### Simulated in the MVP
-- proximity detection via Bluetooth / NFC  
-- OCR-based receipt scanning  
-- biometric authentication  
-- real payment execution through banks or PSPs  
-
-### Implemented in the MVP
-- complete user flow  
-- GUI  
-- state management  
-- split logic  
-- item assignment logic  
-- tax/tip handling  
-- settlement calculation  
-- mock confirmation flow  
-
----
-
-## Technology Overview
-
-### Programming language
-- **Python**
-
-Python was chosen because it enables fast prototyping and clear implementation of business logic.
-
-### Framework
-- **Streamlit**
-
-Streamlit was chosen because it allows rapid development of a working GUI and makes it easy to test interactive MVP flows.
-
-### Paradigm
-The app follows a simple event-driven and state-based structure using:
-- Streamlit session state  
-- helper functions for business logic  
-- modular rendering functions for each page  
-
----
-
-## App Flow
-The MVP follows this user journey:
-
-1. Welcome / Login  
-2. Start a Split  
-3. Receipt  
-4. People  
-5. Choose Split Mode  
-6. Assign Items  
-7. Summary  
-8. Confirm Payment  
-
----
-
-## Code Structure
-The code is organized into the following logical sections:
-
-- **Session state setup**  
-  Initializes all app variables used across the flow  
-
-- **Helper functions**  
-  Handles navigation, validation, and reusable utilities  
-
-- **Calculation logic**  
-  Computes totals, allocations, and settlements  
-
-- **Simulation functions**  
-  Simulates receipt scanning, nearby participant detection, and biometric confirmation  
-
-- **Rendering functions**  
-  Each step of the app is implemented as a separate render function  
-
-- **Main router**  
-  Controls which page is displayed based on the current step  
-
----
-
-## How to Run the App
-
-### 1. Clone the repository
+### Streamlit MVP (logic prototype)
 ```bash
-git clone https://github.com/ivanishantilal/splitsecond-mvp.git
-cd splitsecond-mvp
-```
-### 2. Install dependencies
-``` bash
 pip install streamlit
+streamlit run app.py
 ```
-### 3. Run the app
-``` bash
-py -m streamlit run app.py 
-```
-### 4. Open the app
-Streamlit will provide a local URL, usually:
-``` bash
-http://localhost:8501
-```
-Open this in your browser.
+
+---
+
+## 🧪 The User Flow
+
+1. **Welcome** — sign in (PSD2 framing)
+2. **Start a split** — name the occasion + group
+3. **Discover** — NFC pings nearby phones; they join automatically
+4. **Scan** — OCR pulls items off the receipt
+5. **Choose split mode** — equal or item-based
+6. **Assign** — tap items to claim them
+7. **Review** — see per-person totals
+8. **Settle** — Face ID → SEPA Instant → done
+
+---
+
+## 🛠️ Tech Concept
+
+| Layer | Technology |
+|---|---|
+| Mobile | React Native (concept) |
+| Auth | PSD2 Strong Customer Authentication (biometric) |
+| Payments | SEPA Instant Credit Transfer |
+| Banking | Open Banking APIs (PSD2 AISP/PISP) |
+| Receipt OCR | Cloud vision API (concept) |
+| Group sync | NFC discovery + real-time backend |
+
+---
+
+## 📚 Context
+
+Built as part of the FinTech course, MSc Business Analytics & Management.
+
+**Author:** Ivani Shantilal
